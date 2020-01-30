@@ -1,0 +1,32 @@
+language: node_js
+node_js: stable
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+
+  #before_script:
+  # - npm install -g gulp
+
+script:
+  - npm run build
+  - cp CNAME ./dist/CNAME
+  - cd ./dist
+  - git init
+  - git config user.name "jiangmitiao"
+  - git config user.email "zhang159916@gmail.com"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:master
+# E: Build LifeCycle
+
+branches:
+  only:
+    - master
+env:
+  global:
+    - GH_REF: github.com/jiangmitiao/fundcalc.github.io.git
+
+
+#https://www.jianshu.com/p/5691815b81b6

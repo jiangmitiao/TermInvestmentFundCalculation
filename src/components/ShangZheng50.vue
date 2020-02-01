@@ -1,7 +1,7 @@
 <template>
   <SimpleFundComputer
     v-loading="loading"
-    element-loading-text="加载数据中"
+    element-loading-text="数据加载中"
     title="上证50指数基金模拟定投计算器"
     :fundData="fundData">
   </SimpleFundComputer>

@@ -384,6 +384,11 @@
       },
 
       init() {
+
+        if (this.fundData.length === 0){
+          return;
+        }
+
         let context = this;
         context.fundDataMap = new Map();
         this.fundData.forEach(item => {

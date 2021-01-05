@@ -11,7 +11,7 @@
     "data": "node src/data/ProduceData.js"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "echarts": "^4.6.0",
     "element-ui": "^2.13.0",
     "md5": "^2.2.1",
